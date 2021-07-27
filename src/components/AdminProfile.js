@@ -5,7 +5,9 @@ import axios from 'axios';
 const AdminProfile = () => {
   const [projects, setProjects] = useState([]);
   const fetchProjects = async () => {
-    const res = await axios.get('/assignment');
+    const res = await axios.get(
+      'https://paulaskme4help.herokuapp.com/assignment'
+    );
     setProjects(res.data);
   };
 
