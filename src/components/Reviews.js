@@ -15,9 +15,13 @@ const Reviews = () => {
         const newReviews = {
           desc,
         };
-        await axios.post('https://askme4help.netlify.app/reviews', newReviews, {
-          headers: { Authorization: token },
-        });
+        await axios.post(
+          'https://paulaskme4help.herokuapp.com/reviews',
+          newReviews,
+          {
+            headers: { Authorization: token },
+          }
+        );
         setDesc('');
         return history.push('/');
       }
